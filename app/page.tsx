@@ -1,64 +1,56 @@
-import Image from "next/image";
 
+"use client";
+
+import dynamic from "next/dynamic";
+import { ImagesCarousel } from "./components/ImagesCarousel";
+import SwiperComponent from "./components/SwiperComponent";
+
+import { Toaster } from "@/components/ui/sonner"
+import SpotifyEmbed from "./components/SpotifyEmbed";
+import MusicPlayer from "./components/MusicPlayer";
+import ApologyButtons from "./components/ApologyButtons";
+
+const BackgroundStickers = dynamic(
+  () => import("./components/BackgroundStickers"),
+  { ssr: false }
+);
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="relative flex min-h-screen items-center justify-center bg-black  font-sans ">
+      
+      <BackgroundStickers/>
+      <Toaster
+        richColors
+      />
+      <main className=" flex mx-auto max-w-[1440px] flex-col gap-4 md:flex-row min-h-screen w-full pt-8 px-3">
+        <ImagesCarousel/>
+        <div className="flex z-10 mx-auto w-full flex-col gap-4 max-w-[500px]">
+          
+
+          <h1 className="text-white text-center text-xl font-bold">TOP 10 FACTS I KNOW ABOUT YOU 💖</h1>
+          
+          <SwiperComponent/>
+          <SpotifyEmbed/>
+          <div className="w-full flex px-4 mx-auto max-w-[500px] py-4 flex-col lg:mt-2 h-fit rounded-3xl bg-white/30 backdrop-blur-xs">
+            <h2 className="text-white font-bold">Hi Anj,</h2>
+            <div className="flex text-white mt-5 flex-col gap-5">
+              <p>I have some free time today and I made this website, but don’t judge ha, it’s like very rush, and it’s not perfect lol.</p>
+              <p>Lovey, I really miss you so much na. Please balik na 🥹. I don’t know what to do jud pag wala ka, like akong kamot mangatol na mag chat or mag update saimoha 🥲 and I’m still hoping na you’ll give me a chance. I’m really sorry for what I did, and will for sure, never do that again. I am too careless sakong mga actions, and never thought about the worst case scenario. Sorry if i did bring chaos, and ruin your peace of mind. I can assure you na that won’t happen again.</p>
+              <p>Love, let’s restart 🥲 Let’s try again, please. I want to work things out jud between us, tho it may be challenging, lalo na for you, but please, let’s give it a shot. I love you so much, my lovey.</p>
+              <p>Also, let’s go dinner or coffee later? You can answer using the buttons sa baba</p>
+            </div>
+            <h2 className="text-white font-bold mt-5">All my love,<span className="block">Christian</span></h2>
+          </div>
+
+          <ApologyButtons/>
+
+          <MusicPlayer/>
+
+          
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        
+        
+      
       </main>
     </div>
   );
