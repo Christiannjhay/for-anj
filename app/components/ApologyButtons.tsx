@@ -14,6 +14,7 @@ export default function ApologyButtons() {
       .from("Answers")
       .insert({ choice: "YES" });
 
+      
     if (error) {
       console.error("Failed to insert:", error.message);
       toast.error("Failed to record your response");
