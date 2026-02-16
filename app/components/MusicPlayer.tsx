@@ -19,9 +19,9 @@ export default function MusicPlayer() {
 
   return (
     <div className="flex flex-col items-center justify-center p-8 space-y-4">
-      <h1 className="text-xl font-bold hidden">Now Playing: Teddy Adhitya - Just You</h1>
+      
       <audio className="" ref={audioRef} controls loop>
-        <source src="/audio/Teddy Adhitya - Just You.mp3" type="audio/mpeg" />
+        <source src="/audio/DJ Snake - Middle.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
 

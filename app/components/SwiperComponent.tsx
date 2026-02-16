@@ -18,7 +18,7 @@ export default function SwiperComponent() {
         effect={'cards'}
         grabCursor={true}
         modules={[EffectCards]}
-        className="mySwiper"
+        className="mySwiper select-none"
       >
         <SwiperSlide>You Kain faster than me</SwiperSlide>
         <SwiperSlide>You love flowers</SwiperSlide>

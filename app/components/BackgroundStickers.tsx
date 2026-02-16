@@ -53,7 +53,7 @@ export default function BackgroundStickers() {
       }, []);
 
   return (
-    <div className="absolute inset-0 w-full h-full overflow-hidden">
+    <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none select-none">
       {stickers.map((sticker, i) => (
         <Image
           key={i}

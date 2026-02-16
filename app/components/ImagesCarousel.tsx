@@ -41,7 +41,7 @@ export function ImagesCarousel() {
 
 
   return (
-    <Carousel className="max-md:w-full w-[50%]">
+    <Carousel className="max-md:w-full w-[50%] select-none">
       <CarouselContent>
         {images.map((src, index) => (
           <CarouselItem key={index}>

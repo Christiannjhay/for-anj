@@ -32,7 +32,7 @@ export default function ApologyButtons() {
 
   return (
     <>
-      <div className="flex justify-between mx-auto w-full max-w-[350px]">
+      <div className="flex justify-between mx-auto w-full max-w-[350px] select-none">
         <Button
           className="p-2 w-[150px] font-bold bg-green-500 hover:bg-green-800 rounded-md"
           onClick={handleYesClick}
