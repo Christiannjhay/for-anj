@@ -14,6 +14,7 @@ import { EffectCards } from 'swiper/modules';
 export default function SwiperComponent() {
   return (
     <>
+      <h1 className="text-white text-center mb-4 text-xl font-bold">TOP 10 FACTS I KNOW ABOUT YOU 💖</h1>
       <Swiper
         effect={'cards'}
         grabCursor={true}

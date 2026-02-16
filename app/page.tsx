@@ -23,11 +23,9 @@ export default function Home() {
       <main className=" flex mx-auto max-w-[1440px] flex-col gap-4 md:flex-row min-h-screen w-full pt-8 px-3">
         <ImagesCarousel/>
         <div className="flex z-10 mx-auto w-full flex-col gap-4 max-w-[500px]">
-          <h1 className="text-white text-center text-xl font-bold">TOP 10 FACTS I KNOW ABOUT YOU 💖</h1>
           <SwiperComponent/>
           <SpotifyEmbed/>
           <LetterCard/>
-        
           <MusicPlayer/>
         </div>
       </main>
